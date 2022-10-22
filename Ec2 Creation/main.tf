@@ -13,3 +13,14 @@ resource "aws_security_group" "mysecurity-group" {
   
 }
 
+
+resource "aws_instance" "new-instance" {
+    ami = var.ami-id
+    instance_type = var.instance-type
+
+    tags = {
+        Name = "Instance"
+        Created_By = "Abhilash Kumar"
+    }
+}
+
