@@ -9,7 +9,7 @@ resource "aws_vpc" "myvpc" {
 resource "aws_security_group" "mysecurity-group" {
     name = "My Security Group"
     description = "Created from Terraform"
-    vpc_id  =   aws.myvpc.id
+    vpc_id  =   aws_vpc.myvpc.id
   
 }
 
